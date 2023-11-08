@@ -34,12 +34,12 @@ namespace GA_Stephanie_Lopez_List
         }
         private void DisplayStudents()
         {
-            rtbDisplay.Text = "";
+            rtbDisplay1.Text = "";
 
             for (int i = 0; i < studentNames.Count; i++)
             {
 
-                rtbDisplay.Text += $"{i} - {studentNames[i]}\n";
+                rtbDisplay1.Text += $"{i} - {studentNames[i]}\n";
             }
 
             lblCount.Content = $"Student Count: {studentNames.Count}";

@@ -7,19 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Canvas>
-        <RichTextBox x:Name="rtbDisplay" Height="207" Canvas.Left="156" Canvas.Top="10" Width="182" TextChanged="rtbDisplay_TextChanged">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text=""/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
         <Label x:Name="lblCount"
                Content="Current Count" 
                HorizontalAlignment="Left" 
                Margin="24,19,0,0" 
                VerticalAlignment="Top" 
                Width="106"/>
-
+        <RichTextBox x:Name="rtbDisplay" Height="180" Width="184" Canvas.Left="147" Canvas.Top="19" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <FlowDocument>
+                <Paragraph>
+                    <Run x:Name="rtbDisplay1"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
     </Canvas>
 </Window>

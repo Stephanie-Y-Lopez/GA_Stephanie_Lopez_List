@@ -44,5 +44,42 @@ namespace GA_Stephanie_Lopez_List
 
             lblCount.Content = $"Student Count: {studentNames.Count}";
         }
+
+        private void btnAddStudent_Click(object sender, RoutedEventArgs e)
+        {
+            studentNames.Add(txtStudentName.Text);
+            DisplayStudents();
+        }
+
+        private void btnDisplayStudent_Click(object sender, RoutedEventArgs e)
+        {
+            int index = -1;
+            bool isANumber = int.TryParse(txtIndex.Text, out index);
+
+            if (isANumber && index >= 0 && index < studentNames.Count)
+            {
+                MessageBox.Show(studentNames[index]);
+            }
+            else
+            {
+                MessageBox.Show("Invalid index");
+            }
+        }
+
+        private void btnRemoveByIndex_Click(object sender, RoutedEventArgs e)
+        {
+            int index = -1;
+            bool isANumber = int.TryParse(txtIndex.Text, out index);
+
+            if (isANumber && index >= 0 && index < studentNames.Count)
+            {
+                studentNames.RemoveAt(index);
+                DisplayStudents();
+            }
+            else
+            {
+                MessageBox.Show("Invalid index");
+            }
+        }
     }
 }

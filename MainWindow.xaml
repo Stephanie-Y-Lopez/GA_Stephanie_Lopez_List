@@ -8,17 +8,76 @@
         Title="MainWindow" Height="450" Width="800">
     <Canvas>
         <Label x:Name="lblCount"
-               Content="Current Count" 
-               HorizontalAlignment="Left" 
-               Margin="24,19,0,0" 
-               VerticalAlignment="Top" 
-               Width="106"/>
-        <RichTextBox x:Name="rtbDisplay" Height="180" Width="184" Canvas.Left="147" Canvas.Top="19" HorizontalAlignment="Center" VerticalAlignment="Top">
+               Content="Current Count:" 
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Center" 
+               Width="92" Canvas.Left="254" Canvas.Top="1"/>
+        <RichTextBox x:Name="rtbDisplay" Height="180" Width="184" Canvas.Top="32" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="208">
             <FlowDocument>
                 <Paragraph>
                     <Run x:Name="rtbDisplay1"/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
+        <Label x:Name="lNewStudentName"
+               Content="Add Student Name:" 
+               Canvas.Left="10" 
+               Canvas.Top="19" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Top" 
+               Width="120"/>
+
+        <TextBox x:Name="txtStudentName"
+                Canvas.Left="10" 
+                 TextWrapping="Wrap" 
+                 Text="" 
+                 Canvas.Top="45" 
+                 Width="120" 
+                 HorizontalAlignment="Center" 
+                 VerticalAlignment="Top"/>
+
+        <Button x:Name="btnAddStudent"
+                Content="Add Student" 
+                Canvas.Left="17" 
+                Canvas.Top="78" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Top" 
+                Width="106" Click="btnAddStudent_Click"/>
+
+        <Label Content="Enter an index:" 
+               Canvas.Left="20" 
+               Canvas.Top="143" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Center" 
+               Width="106"/>
+
+        <TextBox x:Name="txtIndex"
+                 Canvas.Left="12"
+                 TextWrapping="Wrap" 
+                 Text="" 
+                 Canvas.Top="169" 
+                 Width="120" 
+                 HorizontalAlignment="Left" 
+                 VerticalAlignment="Center"/>
+
+        <Button x:Name="btnDisplayStudent"
+                Content="Display Student Name" 
+                Canvas.Left="10" 
+                Canvas.Top="197" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Center" 
+                Width="125" 
+                Click="btnDisplayStudent_Click"/>
+        
+        <Button x:Name="btnRemoveByIndex"
+            Content="Remove By Index" 
+            Canvas.Left="105" 
+            Canvas.Top="256" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="125" 
+            Click="btnRemoveByIndex_Click"/>
+
+
     </Canvas>
 </Window>

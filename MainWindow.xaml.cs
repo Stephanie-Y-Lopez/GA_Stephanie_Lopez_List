@@ -81,5 +81,27 @@ namespace GA_Stephanie_Lopez_List
                 MessageBox.Show("Invalid index");
             }
         }
+
+        private void btnAddAtIndex_Click(object sender, RoutedEventArgs e)
+        {
+            int index = -1;
+            bool isANumber = int.TryParse(txtIndex.Text, out index);
+            
+            if (isANumber && index >= 0 && index < studentNames.Count)
+            {
+                studentNames.Insert(index, txtStudentName.Text);
+                DisplayStudents();
+            }
+            else
+            {
+                MessageBox.Show("Invalid index");
+            }
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            studentNames.Clear();
+            DisplayStudents();
+        }
     }
 }

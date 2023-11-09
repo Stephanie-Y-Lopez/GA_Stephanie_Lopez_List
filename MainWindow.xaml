@@ -6,19 +6,23 @@
         xmlns:local="clr-namespace:GA_Stephanie_Lopez_List"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Canvas>
+    <Canvas Background="#FF8BC897">
         <Label x:Name="lblCount"
                Content="Current Count:" 
                HorizontalAlignment="Center" 
                VerticalAlignment="Center" 
-               Width="92" Canvas.Left="254" Canvas.Top="1"/>
-        <RichTextBox x:Name="rtbDisplay" Height="180" Width="184" Canvas.Top="32" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="208">
+               Width="92" 
+               Canvas.Left="254" 
+               Canvas.Top="1"/>
+
+        <RichTextBox x:Name="rtbDisplay" Height="180" Width="184" Canvas.Top="32" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="208" Background="#FFA6D48C">
             <FlowDocument>
                 <Paragraph>
                     <Run x:Name="rtbDisplay1"/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
+
         <Label x:Name="lNewStudentName"
                Content="Add Student Name:" 
                Canvas.Left="10" 
@@ -34,7 +38,8 @@
                  Canvas.Top="45" 
                  Width="120" 
                  HorizontalAlignment="Center" 
-                 VerticalAlignment="Top"/>
+                 VerticalAlignment="Top" 
+                 Background="#FFACD09A"/>
 
         <Button x:Name="btnAddStudent"
                 Content="Add Student" 
@@ -42,7 +47,9 @@
                 Canvas.Top="78" 
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Top" 
-                Width="106" Click="btnAddStudent_Click"/>
+                Width="106" 
+                Click="btnAddStudent_Click" 
+                Background="#FFACFFA5"/>
 
         <Label Content="Enter an index:" 
                Canvas.Left="20" 
@@ -58,7 +65,8 @@
                  Canvas.Top="169" 
                  Width="120" 
                  HorizontalAlignment="Left" 
-                 VerticalAlignment="Center"/>
+                 VerticalAlignment="Center" 
+                 Background="#FFB2D89F"/>
 
         <Button x:Name="btnDisplayStudent"
                 Content="Display Student Name" 
@@ -67,17 +75,38 @@
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Center" 
                 Width="125" 
-                Click="btnDisplayStudent_Click"/>
-        
+                Click="btnDisplayStudent_Click" 
+                Background="#FFAAFFA3"/>
+
         <Button x:Name="btnRemoveByIndex"
-            Content="Remove By Index" 
-            Canvas.Left="105" 
-            Canvas.Top="256" 
-            HorizontalAlignment="Left" 
-            VerticalAlignment="Top" 
-            Width="125" 
-            Click="btnRemoveByIndex_Click"/>
+                Content="Remove Student By Index" 
+                Canvas.Top="276" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Width="146" 
+                Click="btnRemoveByIndex_Click" 
+                Canvas.Left="52" 
+                Background="#FFAFFFA8"/>
 
+        <Button x:Name="btnAddAtIndex"
+                Content="Add Student At Index" 
+                Canvas.Left="55" 
+                Canvas.Top="245" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Width="140"  
+                RenderTransformOrigin="0.507,0.811" 
+                Click="btnAddAtIndex_Click" 
+                Background="#FFAEFDA7"/>
 
+        <Button x:Name="btnClear"
+                Content="Clear List" 
+                Canvas.Left="230" 
+                Canvas.Top="217"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Top" 
+                Width="140"
+                Click="btnClear_Click" 
+                Background="#FFB5FFAF"/>
     </Canvas>
 </Window>
